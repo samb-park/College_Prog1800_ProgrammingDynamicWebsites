@@ -1,0 +1,50 @@
+<!-- 
+    index.html
+    Implemation of questions application for assignment1
+
+    Revision History
+        Sangbong Park, 2021.02.04: Created
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sangbong Park | Assignment1</title>
+</head>
+
+<body>
+    <div class="container">
+        <p class="my-1">For a True/False question, choose 'OK' for True and 'Cancel' for False when prompted.</p>
+        <ul>
+            <li>
+                <input type="button" class="button" value="Question1" onclick="Question1(event)">
+                <span></span>
+            </li>
+            <li>
+                <input type="button" class="button" value="Question2" onclick="Question2(event)">
+                <span></span>
+            </li>
+            <li>
+                <input type="button" class="button" value="Question3" onclick="Question3(event)">
+                <span></span>
+            </li>
+            <li>
+                <input type="button" class="button" value="Question4" onclick="Question4(event)">
+                <span></span>
+            </li>
+            <li>
+                <input type="button" class="button" value="Question5" onclick="Question5(event)">
+                <span></span>
+            </li>
+        </ul>
+        <p class="my-1">Your total score : <span id="score" >Not attempted</span></p>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>

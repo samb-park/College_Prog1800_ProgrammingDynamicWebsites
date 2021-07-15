@@ -1,0 +1,281 @@
+:root{
+    --primary-color : #0F7C90;
+    --secondary-color : #645A53;
+    --third-color :#DCDACB;
+
+    --background-color :#FBFBF8;
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.container{
+   width: 900px;
+   margin: 2rem 0;
+}
+
+i{
+    margin: 0 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+header,section,footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header{
+    color: var(--secondary-color) ;
+    font-size: 1.0rem;
+    border-bottom: 1px var(--third-color) solid;
+
+    
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .container #logo i{
+    color: #EA5252;
+
+}
+
+#menu a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem;
+    color: var(--primary-color) ;
+    border: 1px var(--primary-color) solid;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+
+
+header .container #search{
+    padding: 0.5rem 4rem;
+    border: 1px var(--secondary-color);
+    border-style: double;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    background-color: #FBFBF8;
+
+}
+/* Section */
+
+section{
+    color: var(--secondary-color);
+
+    
+    border-bottom: 1px var(--third-color) solid;
+}
+
+section h1{
+    grid-area: header;
+}
+/* Section 1*/
+#section1 .container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "javascript nodejs"
+    "html css";
+}
+
+/* #section1 Box Image */
+#section1{
+    background-color: var(--background-color);
+}
+
+#section1 .imagebox{
+    margin: 0.5rem;
+    width: 160px;
+    text-align: center;
+}
+
+#section1 #javascript{
+    grid-area: javascript;
+}
+#javascript .itemImage{
+    color: #F7DF1E;
+}
+
+#section1 #nodejs{
+    grid-area: nodejs;
+}
+#nodejs .itemImage{
+    color: #22AE5A
+}
+
+#section1 #html{
+    grid-area: html;
+}
+#html .itemImage{
+    color:#E96227;
+}
+
+#section1 #css{
+    grid-area: css;
+}
+#css .itemImage{
+    color : #413281;
+}
+
+#section1 .box{
+    display: flex;
+    margin: 1rem 0 0 0;
+}
+.imagebox .itemImage{
+    font-size: 10rem;
+    cursor: pointer;
+}
+
+.selectitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.selectitem i{
+    color: red;
+}
+
+/* #section1 Box Content */
+.box{
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+}
+.content{
+    margin-left: 1rem;
+    letter-spacing: 1px;
+}
+.box div{
+    margin-bottom: 0.2rem;
+}
+.box h3{
+    margin-bottom: 0.9rem;
+    font-size: 1.2rem;
+}
+.author{
+    font-size: 0.5rem;
+}
+.grade{
+    text-align: center;
+}
+.rate i{
+    margin: 0 0.2rem 0 0;
+}
+
+/* section2 */
+#section2 form{
+    display: grid;
+    grid-template-areas: 
+    "mandatory nonmandatory"
+    "submit submit";
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+#section2 .fieldset{
+    padding: 0.5rem 1rem;
+}
+
+#section2 input, select{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+#mandatory{
+    grid-area: mandatory;
+}
+#nonmandatory{
+    grid-area: nonmandatory;
+}
+#submit{
+    grid-area: submit;
+}
+#section2 input[type="button"]{
+    margin: 0.5rem;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+#submit label{
+    margin-left: 1rem;
+}
+
+#section2 small{
+    visibility: hidden;
+}
+#section2 .fieldset{
+    border: 1px var(--third-color) solid;
+    border-radius: 5px;
+}
+
+#section2 .formbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+/* Footer */
+footer{
+    background-color: var(--background-color);
+
+}
+footer a{
+    text-align: center;
+    margin: 1rem;
+    color: var(--secondary-color);
+}
+
+
+/* Utility */
+
+.checked{
+    color: var(--secondary-color) !important;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.successBorder{
+    border: green 1px solid;
+}
+
+
+.errorBorder{
+    border: red 1px solid;
+}
+
+.errorFont{
+    color: red;
+    visibility: visible !important;
+}

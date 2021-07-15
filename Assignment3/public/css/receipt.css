@@ -1,0 +1,23 @@
+
+.box{
+    margin: 1rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.text{
+    width:100px;
+    text-align: right;
+}
+
+p{
+    margin-left: 2rem;
+    width: 300px;
+}
+
+#price{
+    width: 500px;
+}
+
+

@@ -1,0 +1,37 @@
+<%- include('_layouts/header') -%>
+<link rel="stylesheet" href="css/receipt.css">
+<title>Assignment3 | Sangbong Park</title>
+</head>
+<section>
+    <div class="container">
+        <div class="box">
+            <label class="text">User Name : </label>
+            <p id="username"><%= username %></p>
+        </div>
+        <div class="box">
+            <label class="text">Address : </label>
+            <p id="address"><%= address %></p>
+        </div>
+        <div class="box">
+            <label class="text">City : </label>
+            <p id="city"><%= city %></p>
+        </div>
+        <div class="box">
+            <label class="text">Province : </label>
+            <p id="province"><%= province %></p>
+        </div>
+        <div class="box">
+            <label class="text">Email : </label>
+            <p id="email"><%= email %></p>
+        </div>
+        <div class="box">
+            <label class="text">Item LIst : </label>
+            <p id="itemList"><%= itemList %> </p>
+        </div>
+        <div class="box">
+            <label class="text">Total price : </label>
+            <p id="itemList"><%= price %> CAD</p>
+        </div>
+    </div>
+</section>
+<%- include('_layouts/footer') -%>
