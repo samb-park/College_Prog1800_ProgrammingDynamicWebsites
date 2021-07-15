@@ -1,0 +1,88 @@
+<!-- 
+    index.html
+    Create converter with selection structures.
+
+    Revision History
+        Sangbong Park, 2021.01.28: Created
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        input{
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            width: 100%;
+        }
+
+        p{
+            text-align: center;
+        }
+    </style>
+
+
+    <title>Sangbong Park | In-Class Task2</title>
+    <script type="text/javascript">
+        //Function to convert user input.
+        function ConverterValue(event){
+            let inputValue;
+            const convertValue = event.target.value;
+            const result = document.getElementById('result');
+
+            //If user enter the invalid number, it will ask again.
+            do{
+                inputValue = prompt("Please enter a number to convert");
+            }
+            while(Number.isNaN(parseInt(inputValue)));
+
+            switch(convertValue){
+                //Convert from meter to feet
+                case "Meter to Feet":
+                    result.innerText = inputValue + ' ft -> ' + inputValue * 3.28084 + ' m';
+                    break;
+                    //Convert from feet to meter
+                case "Feet to Meter":
+                    result.innerText = inputValue + ' m -> '+ inputValue / 3.281 + ' ft';
+                    break;
+                    //Convert from Celsius to Fahrenherit
+                case "Celsius to Fahrenherit":
+                    result.innerText = inputValue + ' °C -> '+ (inputValue -32) * 5 / 9 +' °F';
+                    break;
+                    //Convert from Fahrenherit to Celsius
+                case "Fahrenherit to Celsius":
+                    result.innerText = inputValue + ' °F -> '+ (inputValue * 9/5) + 32 + ' °C';
+                    break;
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Converter</h1>
+        <p>Click the button below to convert the temperature or length.</p>
+        <input type="button" value="Meter to Feet" onclick="ConverterValue(event);">
+        <input type="button" value="Feet to Meter" onclick="ConverterValue(event);">
+        <input type="button" value="Celsius to Fahrenherit" onclick="ConverterValue(event);">
+        <input type="button" value="Fahrenherit to Celsius" onclick="ConverterValue(event);">
+        <p><span id="result">RESULT</span></p>
+    </div>
+</body>
+</html>

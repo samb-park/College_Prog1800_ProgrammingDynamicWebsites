@@ -1,0 +1,62 @@
+<!-- 
+    index.html
+    Addition and Modulus operation for inClassTask1
+
+    Revision History
+        Sangbong Park, 2021.01.21: Created
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <title>Sangbong Park | InClass1</title>
+    <script type="text/javascript">
+        // This function sums up the numbers 1 and 2.
+        function addition() {
+            // Receive two numbers from the user
+            const inputNumber1 = prompt("Please enter the first number for the sum of two numbers");
+            const inputNumber2 = prompt("Please enter the second number for the sum of two numbers");
+
+            //Sum number 1 and number 2
+            const sumOfResult = parseInt(inputNumber1) + parseInt(inputNumber2);
+            const dsiplayResult = document.getElementById('result');
+
+            //Display result
+            dsiplayResult.innerHTML = `${inputNumber1} + ${inputNumber2} = ${sumOfResult}`;
+        }
+
+        // This function computes modulus from number 1 to number 2.
+        function modulus() {
+            // Receive two numbers from the user
+            const inputNumber1 = prompt("Please enter the first number for modular operation.");
+            const inputNumber2 = prompt("Please enter the seconds number for modular operation.");
+
+            //Computes modulus number 2 from number 1.
+            const sumOfResult = parseInt(inputNumber1) % parseInt(inputNumber2);
+            const dsiplayResult = document.getElementById('result');
+
+            //Display result
+            dsiplayResult.innerHTML = `${inputNumber1} % ${inputNumber2} = ${sumOfResult}`;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p>Please click one of two buttons for addition or modulus two numbers and then please enter number only.</p>
+        
+        <input type="button" value="Addition" onclick="addition();">
+        <input type="button" value="Modulus" onclick="modulus();">
+        <p id="result"></p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "inclasstask7",
+  "version": "1.0.0",
+  "description": "InClassTask7",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sangbong Park",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*"
+  }
+}

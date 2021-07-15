@@ -1,0 +1,66 @@
+<!-- 
+    index.html
+    Using loop and condition for inClassTask3
+
+    Revision History
+        Sangbong Park, 2021.02.04: Created
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Sans JP', sans-serif;
+
+        }
+        input{
+            font-size: 1.5rem;
+            padding: 0.8rem;
+        }
+        p{
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+    <title>Sangbong Park | In-Class Task3</title>
+</head>
+<body>
+
+        <input type="button" value="Start Countdown" onclick="CountDownStart();">
+        <p id="countdown">To run the countdown, please run the button above.</p>
+        <img src="./image/roket.jpg" alt="roket ship">
+
+    <script>
+        const countdown = document.getElementById('countdown');
+        let count = 10;
+        
+        //Button Event Handler. If user clicks the button, this method is triggered.
+        function CountDownStart(){
+            for(i = 0 ; i < 11 ; i++){
+                //It delays to display number.
+                setTimeout(()=>{
+                    //When it becomes to zero, BLASTOFF! is shown
+                    if(count === 0){
+                        countdown.innerHTML = "BLASTOFF!";
+                        count = 10;
+                        clearInterval(timerId);
+                    }
+                    else{
+                        countdown.innerHTML = `${count--}<br>`;
+                    }
+                    //It will triggered after 1000ms * i
+                }, 1000*i);
+            }
+        }
+    </script>
+</body>
+</html>

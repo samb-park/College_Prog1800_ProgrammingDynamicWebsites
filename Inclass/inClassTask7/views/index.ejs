@@ -1,0 +1,171 @@
+ <%- include('_layouts/header') -%>
+<section id="section1">
+    <div class="container">
+        <h1>Programming Languages Courses</h1>
+        <div class="box" id="javascript">
+            <div class="imagebox">
+                <i class="fab fa-js-square itemImage"></i>
+                <div class="selectitem">
+                    <i class="fas fa-check"></i>
+                    <p>Selected</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Javascript</h3>
+                <div class="level">Expert Level</div>
+                <div class="author">Sangbong Park</div>
+                <div class="price">CA $5</div>
+                <div class="rate">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="nodejs">
+            <div class="imagebox">
+                <i class="fab fa-node-js itemImage"></i>
+                <div class="selectitem">
+                    <i class="fas fa-check"></i>
+                    <p>Selected</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>Node.JS</h3>
+                <div class="level">Intermediate Level</div>
+                <div class="author">Sangbong Park</div>
+                <div class="price">CA $5</div>
+                <div class="rate">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="box" id="html">
+            <div class="imagebox">
+                <i class="fab fa-html5 itemImage"></i>
+                <div class="selectitem">
+                    <i class="fas fa-check"></i>
+                    <p>Selected</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>HTML</h3>
+                <div class="level">Beginning Level</div>
+                <div class="author">Sangbong Park</div>
+                <div class="price">CA $5</div>
+                <div class="rate">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+            </div>
+        </div>
+        <div class="box" id="css">
+            <div class="imagebox">
+                <i class="fab fa-css3-alt itemImage"></i>
+                <div class="selectitem">
+                    <i class="fas fa-check"></i>
+                    <p>Selected</p>
+                </div>
+            </div>
+            <div class="content">
+                <h3>CSS</h3>
+                <div class="level">Expert Level</div>
+                <div class="author">Sangbong Park</div>
+                <div class="price">CA $5</div>
+                <div class="rate">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<section id="section2">
+    <div class="container">
+        <h1>Customer Information</h1>
+        
+        <form>
+            <div class="fieldset" id="mandatory">
+                <div class="formbox">
+                    <label for="username">Username</label>
+                    <input type="text"  id="username" placeholder="Please enter name">
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" placeholder="Please enter  address" >
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="city">City</label>
+                    <input type="text" id="city" placeholder="Please enter city" >
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="province">Province</label>
+                    <select name="province" size="1" id="province">  
+                        <option value="0"> AB </option>  
+                        <option value="0.07"> BC </option>  
+                        <option value="0.07"> MB </option>  
+                        <option value="0"> NT </option>  
+                        <option value="0"> NU </option>  
+                        <option value="0.09975"> QC </option>  
+                        <option value="0.06"> SK </option>  
+                        <option value="0"> YT </option>  
+                        <option value="0.08"> ON </option>  
+                        <option value="0.1"> NB </option>  
+                        <option value="0.1"> NL </option>  
+                        <option value="0.1"> NS </option>  
+                        <option value="0.1"> PE </option>  
+                    </select>  
+                    <small>error message</small>
+                </div>
+            </div>
+            <div class="fieldset" id="nonmandatory">
+                <div class="formbox">
+                    <label for="credit">Credit</label>
+                    <input type="text" id="credit" placeholder="Please enter credit">
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Please enter email">
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Please enter password">
+                    <small>error message</small>
+                </div>
+                <div class="formbox">
+                    <label for="password2">Confirm password</label>
+                    <input type="password" id="confirmPassword" placeholder="Please enter password2">
+                    <small>error message</small>
+                </div>
+            </div>
+            <div class="fieldset" id="submit">
+                <label >ITEMS : </label><label id="itemList">-</label><br>
+                <label >PRICE : </label><label id="price">0</label><br>
+                <label id="message"> ... </label>
+                <input type="button" id="btnSubmit" value="Generate Receipt">
+            </div>
+        </form>
+    </div>
+</section>
+<%- include('_layouts/footer') -%>

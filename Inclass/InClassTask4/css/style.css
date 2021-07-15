@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Section */
+section{
+    height: 80vh;
+}
+
+section h1{
+    margin: 1rem;
+    font-size: 3rem;
+}
+
+section p{
+    margin: 1rem;
+    font-size: 2rem;
+}
+
+#image{
+    width: 500px;
+    cursor: pointer;
+}
+
+
+/* Footer */

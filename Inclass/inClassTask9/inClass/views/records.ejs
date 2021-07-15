@@ -1,0 +1,38 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section class="w50">
+        <div class="formRecordData">
+            <%
+                for(record of records){
+                
+            %>
+                <p><%= record.name%></p>
+                <ul>
+                    <li>
+                        <%= record.studentId%>
+                    </li>
+                    <li>
+                        <%= record.email%>
+                    </li>
+                    <li>
+                        <%= record.course%>
+                    </li>
+
+                </ul>
+            <%
+                }
+            %>
+        </div>
+    </section>
+<div class="clear"></div>
+</body>
+<%- include('layouts/footer'); -%>
+
+
+
+
+
+
+
+
