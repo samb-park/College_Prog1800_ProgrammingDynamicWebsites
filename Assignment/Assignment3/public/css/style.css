@@ -1,0 +1,249 @@
+:root{
+    --primary-color : #0F7C90;
+    --secondary-color : #645A53;
+    --third-color :#DCDACB;
+
+    --background-color :#FBFBF8;
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+
+}
+
+.container{
+   width: 900px;
+   margin: 2rem 0;
+}
+
+i{
+    margin: 0 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--third-color);
+}
+
+header,section,footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header */
+header{
+    color: var(--secondary-color) ;
+    font-size: 1.0rem;
+    border-bottom: 1px var(--third-color) solid;
+
+    
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .container #logo i{
+    color: #EA5252;
+
+}
+#menu a{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin: 1rem;
+    color: var(--primary-color) ;
+    border: 1px var(--primary-color) solid;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+}
+
+header .container #search{
+    padding: 0.5rem 4rem;
+    border: 1px var(--secondary-color);
+    border-style: double;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    background-color: #FBFBF8;
+
+}
+/* Section */
+
+section{
+    color: var(--secondary-color);
+    border-bottom: 1px var(--third-color) solid;
+}
+
+section h1{
+    grid-area: header;
+}
+
+/* section1 */
+/* Items */
+#section #items{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "html nodejs"
+    "css javascript";
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+#receipt h1{
+    grid-area: header;
+}
+
+.imageBox{
+    text-align: center;
+}
+
+.imageBox p{
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    color: var(--secondary-color);
+}
+
+input[type="checkbox"]+label{
+    display: block;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label{
+    display: block;
+    color: var(--secondary-color);
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.css{
+    color : #413281;
+    grid-area: css;
+}
+.html{
+    color:#E96227;
+    grid-area: html;
+}
+.javascript{
+    color: #F7DF1E;
+    grid-area: javascript;
+}
+.nodejs{
+    color: #22AE5A;
+    grid-area: nodejs;
+}
+
+/* Receipt */
+#section #receipt{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "mandatory nonmandatory"
+    "submit submit";
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+#receipt h1{
+    grid-area: header;
+}
+
+#section .fieldset{
+    padding: 0.5rem 1rem;
+}
+
+#section input, select{
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+#mandatory{
+    grid-area: mandatory;
+}
+#nonmandatory{
+    grid-area: nonmandatory;
+}
+#submit{
+    grid-area: submit;
+}
+#section input[type="submit"]{
+    margin: 0.5rem;
+    width: 95%;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+#section input[name="itemList"]{
+    border: none;;
+}
+
+#submit label{
+    margin-left: 1rem;
+}
+
+#section small{
+    /* visibility: hidden; */
+    color: red;
+}
+#section .fieldset{
+    border: 1px var(--third-color) solid;
+    border-radius: 5px;
+}
+
+#section .formbox{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+/* Footer */
+footer{
+    background-color: var(--background-color);
+
+}
+footer a{
+    text-align: center;
+    margin: 1rem;
+    color: var(--secondary-color);
+}
+
+
+/* Utility */
+
+.checked{
+    color: var(--secondary-color) !important;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.successBorder{
+    border: green 1px solid;
+}
+
+
+.errorBorder{
+    border: red 1px solid;
+}
+
+.errorFont{
+    color: red;
+    visibility: visible !important;
+}
