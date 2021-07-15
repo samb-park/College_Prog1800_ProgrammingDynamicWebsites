@@ -1,0 +1,31 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section class="w50">
+        <div class="lists">
+            <div>Name</div>
+            <div>Phone</div>
+            <div>Sandwich</div>
+            <div>Fries</div>
+            <div>Soda</div>
+            <div>Sub Total</div>
+            <div>Tax</div>
+            <div>Total</div>
+            <% 
+        for(order of orders)
+        {
+            %>
+            <div><%=order.name%></div>
+            <div><%=order.phone%></div>
+            <div><%=order.sandwich%></div>
+            <div><%=order.fries%></div>
+            <div><%=order.soda%></div>
+            <div><%=order.subTotal%></div>
+            <div><%=order.tax%></div>
+            <div><%=order.totalCost%></div>
+            <%
+        }
+            %>
+        </div>
+    </section>
+<%- include('layouts/footer'); -%>

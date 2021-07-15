@@ -1,0 +1,36 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section class="w50">
+        <div class="home">
+            <div class="section form">
+                <form name="form" method="post" action="/">
+                    <label>Name *:</label>
+                    <input id="name" placeholder="First Last" type="text" name="name">
+                    <label>phone *:</label>
+                    <input id="phone" placeholder="1231231234" type="text" name="phone">
+                    <label>Chicken Sandwich:</label>
+                    <input id="sandwich" type="text" name="sandwich">
+                    <label>French Fries:</label>
+                    <input id="fries" type="text" name="fries">
+                    <label>Soda:</label>
+                    <input id="soda" type="text" name="soda">
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div class="section result">
+                <%
+                if(typeof(errors) != 'undefined'){
+                  for(var error of errors){
+                %>
+                    <p class="errors"><%= error.msg %></p>
+                <%
+                  }
+                }
+                %>
+            </div>
+        </div>
+    </section>
+
+<%- include('layouts/footer'); -%>

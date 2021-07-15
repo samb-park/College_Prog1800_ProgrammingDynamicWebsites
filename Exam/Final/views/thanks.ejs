@@ -1,0 +1,26 @@
+<%- include('layouts/header'); -%>
+<body>
+    <%- include('layouts/nav'); -%>
+    <section class="w50" id="thanks">
+            <%
+            if(typeof(errors) == 'undefined'){
+            %>
+                <div class="message">
+                    <h1>Thank you for your order!</h1>        
+                    <h2>Here are your order detailes : </h2>
+                    <div>Name : <%= name %> </div>
+                    <div>Phone : <%= phone %></div>
+                    <div>Total number of Chicken Sandwich : <%= sandwich %></div>
+                    <div>Total number of French Fries : <%= fries %></div>
+                    <div>Total number of Soda : <%= soda %></div>
+                    <div>Sub Total : $ <%= subTotal %></div>
+                    <div>Tax : $ <%= tax %></div>
+                    <div>Total cost : $<%= totalCost %></div>
+                </div>
+            <%
+            }
+            %>
+        
+    </section>
+
+<%- include('layouts/footer'); -%>
